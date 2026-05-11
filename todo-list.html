@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Focus Flow — To-Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Checkbox</h1>
+    <p>Stay on track, one task at a time.</p>
+  </header>
+
+  <div class="layout">
+
+    <!-- ══ CONTAINER 1: Progress Bar ══ -->
+    <div class="card" id="progress-container">
+      <div class="card-label">Overall Progress</div>
+      <div class="progress-stats">
+        <div>
+          <div class="big-num" id="pct-num">0%</div>
+          <div class="big-label">Completed</div>
+        </div>
+        <div class="right-info">
+          <span id="done-count">0</span> done
+          <span id="total-count">0</span> total tasks
+        </div>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="bar-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- ══ CONTAINER 2: Task Input + List ══ -->
+    <div class="card" id="task-container">
+      <div class="card-label">My Tasks</div>
+      <div class="add-row">
+        <input type="text" id="task-input" placeholder="Add a new task…" maxlength="120" />
+        <button id="add-btn">+ Add</button>
+      </div>
+      <ul id="task-list">
+        <li class="empty-msg" id="empty-msg">No tasks yet — add one above!</li>
+      </ul>
+    </div>
+
+    <!-- ══ CONTAINER 3: Remaining & Completed ══ -->
+    <div class="card" id="status-container">
+      <div class="status-col">
+        <div class="status-col-label"><span class="dot remaining"></span> Remaining</div>
+        <ul class="status-list" id="remaining-list">
+          <li class="status-empty">Nothing remaining</li>
+        </ul>
+      </div>
+      <div class="status-col">
+        <div class="status-col-label"><span class="dot completed"></span> Completed</div>
+        <ul class="status-list" id="completed-list">
+          <li class="status-empty">Nothing completed yet</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+ <script src ="script.js"></script> 
+  
+</body>
+</html>
